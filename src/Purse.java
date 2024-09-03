@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Purse {
 
-    private Map<Denomination, Integer> cash = new HashMap<>();
+    private final Map<Denomination, Integer> cash = new HashMap<>();
 
     public void add(Denomination type, int num){
         if(cash.containsKey(type)) {

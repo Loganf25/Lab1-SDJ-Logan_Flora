@@ -4,9 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RegisterPanel extends JPanel {
-    private Register register = new Register();
-    private JTextField input = new JTextField();
-    private PursePanel changePanel = new PursePanel();
+    //private Register register;
+    private final JTextField input = new JTextField();
+    private final PursePanel changePanel = new PursePanel();
 
     public RegisterPanel() {
         this.setPreferredSize(new Dimension(800, 800));
@@ -27,7 +27,7 @@ public class RegisterPanel extends JPanel {
     private class inputListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             double amount = Double.parseDouble(input.getText());
-            Purse changeBack = register.makeChange(amount);
+            Purse changeBack = Register.makeChange(amount);
             changePanel.setPurse(changeBack);
             changePanel.repaint();
         }
