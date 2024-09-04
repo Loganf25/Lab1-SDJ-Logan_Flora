@@ -23,13 +23,16 @@ public class RegisterPanel extends JPanel {
         //Label for input field
         inputPanel.add(new JLabel("Enter amount to get back change:"));
         inputPanel.add(input);
+        //Adds both new nested panels to the Register Panel
         this.add(inputPanel);
         this.add(changePanel);
     }
     //Class for action to occur after enter is pressed in the textField
     private class inputListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            //Allows for a double to be taken from textField and used here
             double amount = Double.parseDouble(input.getText());
+            //Make a purse to send to the changePanel to display those images
             Purse changeBack = Register.makeChange(amount);
             changePanel.setPurse(changeBack);
             changePanel.repaint();

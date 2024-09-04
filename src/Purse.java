@@ -11,6 +11,7 @@ public class Purse {
             cash.replace(type, cash.get(type), cash.get(type) + num);
         }
         else{
+            //If there is no case already for that specific denomination
             cash.put(type, num);
         }
     }
