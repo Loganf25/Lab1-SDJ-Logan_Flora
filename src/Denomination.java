@@ -1,3 +1,4 @@
+//Denominations Record Class - Holds information for each US denomination used in project
 import java.util.*;
 public record Denomination(String name, double amt, String form, String img) {
     //All final instances for Bills used
@@ -13,7 +14,7 @@ public record Denomination(String name, double amt, String form, String img) {
     public static final Denomination fiveCents = new Denomination("Nickel", 0.05, "Coin", "currency/nickel.png");
     public static final Denomination oneCent = new Denomination("Penny", 0.01, "Coin", "currency/penny.png");
 
-    // Put all into list  to make makeChange much more compact and easy to code
+    // Put all into list  to make makeChange/PursePanel much more compact and easy to code (enhanced for loop)
     public static final List<Denomination> denominations = Arrays.asList(
             oneHundredDollars,
             fiftyDollars,

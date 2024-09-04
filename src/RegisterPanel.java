@@ -1,3 +1,4 @@
+//Register Panel Class - Creates the register in a gui format instead
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,6 +9,7 @@ public class RegisterPanel extends JPanel {
     private final JTextField input = new JTextField();
     private final PursePanel changePanel = new PursePanel();
 
+    //Constructor
     public RegisterPanel() {
         this.setPreferredSize(new Dimension(800, 800));
         this.setBackground(Color.black);
@@ -24,6 +26,7 @@ public class RegisterPanel extends JPanel {
         this.add(inputPanel);
         this.add(changePanel);
     }
+    //Class for action to occur after enter is pressed in the textField
     private class inputListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             double amount = Double.parseDouble(input.getText());

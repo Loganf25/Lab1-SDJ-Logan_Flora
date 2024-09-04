@@ -1,6 +1,8 @@
+//Register Class that takes a purse and an amount and returns smallest amount of change to purse
 import java.util.Scanner;
 
 public class Register {
+    //Main for printing out purse instead of using gui (testing)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter amount to to get change:  ");
@@ -12,8 +14,9 @@ public class Register {
             bank.toString();
         }
     }
-
+//Main change making function
     public static Purse makeChange(double amt) {
+        //Variables
         Purse retPur = new Purse();
         double left = amt;
         //This for loop will go through the created and sorted (biggest to smallest denomination)

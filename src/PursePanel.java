@@ -1,3 +1,4 @@
+//Purse Panel Class- Holds gui portion of the purse, which displays images of denominations instead of words
 import javax.swing.*;
 import java.awt.*;
 

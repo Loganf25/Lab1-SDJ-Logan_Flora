@@ -1,3 +1,4 @@
+//Holds the Purse Class that has a map with the amount of each domination that the purse holds
 import java.util.*;
 
 public class Purse {
